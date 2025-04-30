@@ -1,0 +1,15 @@
+apriltag_detector:                 # node name
+  ros__parameters:
+    family: 36h11         # tag family name: 16h5, 25h9, 36h11
+    size: 0.5             # default tag edge size in meter
+    max_hamming: 0        # maximum allowed hamming distance (corrected bits)
+    profile: false        # print profiling information to stdout
+
+    # tuning of detection (defaults)
+    detector:
+      threads: 1          # number of threads
+      decimate: 2.0       # decimate resolution for quad detection
+      blur: 0.0           # sigma of Gaussian blur for quad detection
+      refine: True        # snap to strong gradients
+      sharpening: 0.25    # sharpening of decoded images
+      debug: False        # write additional debugging images to current working directory
